@@ -15,7 +15,7 @@ public class ShoppingList {
    }
 
    public void addEntry(String product) {
-      String text = String.format("%d : %s", this.count++, product);
+      String text = String.format("%d : %s", count++, product);
       this.entries.add(text);
    }
 
