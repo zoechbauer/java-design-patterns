@@ -1,6 +1,6 @@
 package creation_factoryMethod_pattern_exercise;
 
-public class TheTiredWarrior extends WarGame {
+public class TheTiredWarrior extends ItemFactory {
    private static int hammerId = 0;
    private static int shieldId = 0;
 
@@ -9,7 +9,7 @@ public class TheTiredWarrior extends WarGame {
     * Shield: else Number: 1...10
     */
    @Override
-   public Item generateItem(int number) {
+   public Item createItem(int number) {
       if (number % 5 == 0) { // tired
          String name = String.format("Hammer-%s", ++this.hammerId);
          int attackValue = number;
