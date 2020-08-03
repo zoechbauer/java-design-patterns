@@ -11,13 +11,13 @@ public class TheTiredWarrior extends ItemFactory {
    @Override
    public Item createItem(int number) {
       if (number % 5 == 0) { // tired
-         String name = String.format("Hammer-%s", ++this.hammerId);
+         String name = String.format("Hammer-%s", ++hammerId);
          int attackValue = number;
-         return new Hammer(this.hammerId, name, attackValue);
+         return new Hammer(hammerId, name, attackValue);
       } else {
-         String name = String.format("Schild-%s", ++this.shieldId);
+         String name = String.format("Schild-%s", ++shieldId);
          int defenseValue = number;
-         return new Shield(this.shieldId, name, defenseValue);
+         return new Shield(shieldId, name, defenseValue);
       }
    }
 }
