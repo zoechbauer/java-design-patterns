@@ -20,6 +20,9 @@ public class Program {
       chain1.calculate(new Numbers(3.5, 1.5, "-"));
       chain1.calculate(new Numbers(3.5, 1.5, "+"));
       chain1.calculate(new Numbers(3.5, 1.5, "/"));
+
+      // not implemented operation
+      chain1.calculate(new Numbers(3.5, 1.5, "%"));
    }
 }
 
@@ -28,3 +31,4 @@ public class Program {
 //3,50 - 1,50 = 2,00 
 //3,50 + 1,50 = 5,00 
 //3,50 / 1,50 = 2,33 
+//Die Operation '%' wurde nicht implementiert!
