@@ -5,4 +5,8 @@ public class CashMachine {
       command.execute();
    }
 
+   public void undoBankTransaction(BankTransactionCommand command) {
+      command.undo();
+   }
+
 }

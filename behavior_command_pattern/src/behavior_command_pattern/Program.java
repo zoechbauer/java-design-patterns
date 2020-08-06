@@ -17,6 +17,11 @@ public class Program {
       cashMachine.executeBankTransaction(command2);
       cashMachine.executeBankTransaction(command3);
       cashMachine.executeBankTransaction(command4);
+
+      cashMachine.undoBankTransaction(command4);
+      cashMachine.undoBankTransaction(command3);
+      cashMachine.undoBankTransaction(command2);
+      cashMachine.undoBankTransaction(command1);
    }
 }
 
@@ -26,3 +31,7 @@ public class Program {
 //Auszahlung: 500,00 €, neuer Kontostand: 1500,00 €
 //Einzahlung: 1000,00 €, neuer Kontostand: 2500,00 €
 //Die Abhebung von 4000,00 €übersteigt den Überziehungsrahmen von -1000,00 €, Kontostand: 2500,00 €
+//Undo konnte nicht durchgeführt werden, da die vorige Transaction fehlerhaft beendet wurde.
+//Banktransaktion wurde rückgängig gemacht, neuer Kontostand: 1500,00 €
+//Banktransaktion wurde rückgängig gemacht, neuer Kontostand: 2000,00 €
+//Banktransaktion wurde rückgängig gemacht, neuer Kontostand: 0,00 €

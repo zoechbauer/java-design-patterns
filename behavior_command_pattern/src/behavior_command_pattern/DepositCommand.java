@@ -14,4 +14,12 @@ public class DepositCommand implements BankTransactionCommand {
       this.bankAccount.deposit(this.amount);
    }
 
+   @Override
+   public void undo() {
+      double oldBalance = this.bankAccount.getBalance() - this.amount;
+      this.bankAccount.setBalance(oldBalance);
+      System.out.printf("Banktransaktion wurde rückgängig gemacht, neuer Kontostand: %.2f €%n",
+            this.bankAccount.getBalance());
+   }
+
 }
