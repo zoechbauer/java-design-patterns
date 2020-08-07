@@ -5,5 +5,5 @@ public interface ChannelCollection {
 
    void removeChannel(Channel channel);
 
-   ChannelIterator createIterator();
+   ChannelIterator createIterator(ChannelIteratorType iteratorType);
 }

@@ -20,8 +20,19 @@ public class CarRadio implements ChannelCollection {
    }
 
    @Override
-   public ChannelIterator createIterator() {
-      ChannelIterator iterator = new ChannelIteratorNormal(channels);
+   public ChannelIterator createIterator(ChannelIteratorType iteratorType) {
+      ChannelIterator iterator = null;
+      switch (iteratorType) {
+      case NORMAL:
+         iterator = new ChannelIteratorNormal(channels);
+         break;
+      case SHUFFLE:
+         iterator = new ChannelIteratorShuffle(channels);
+         break;
+      default:
+         System.out.printf("Der Iterator '%s' wurde noch nicht implementiert!%n", iteratorType.name());
+         break;
+      }
       return iterator;
    }
 
