@@ -22,6 +22,8 @@ public class Program {
       cashMachine.undoBankTransaction(command3);
       cashMachine.undoBankTransaction(command2);
       cashMachine.undoBankTransaction(command1);
+
+      cashMachine.listExecutedCommands();
    }
 }
 
@@ -35,3 +37,9 @@ public class Program {
 //Banktransaktion wurde rückgängig gemacht, neuer Kontostand: 1500,00 €
 //Banktransaktion wurde rückgängig gemacht, neuer Kontostand: 2000,00 €
 //Banktransaktion wurde rückgängig gemacht, neuer Kontostand: 0,00 €
+//
+//Log der Banktransaktionen
+//Transaktions-Nr 1: Einzahlung: 2000,00 €, Kontostand neu: 2000,00 €
+//Transaktions-Nr 2: Auszahlung: 500,00 €, Kontostand neu: 1500,00 €
+//Transaktions-Nr 3: Einzahlung: 1000,00 €, Kontostand neu: 2500,00 €
+//Transaktions-Nr 4: Auszahlung: 4000,00 €, Kontostand neu: 2500,00 €

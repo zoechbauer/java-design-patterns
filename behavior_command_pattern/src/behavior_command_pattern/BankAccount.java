@@ -1,6 +1,6 @@
 package behavior_command_pattern;
 
-public class BankAccount {
+public class BankAccount implements Cloneable {
    private long accountNumber;
    private double balance;
    private final double OVERDRAFT = -1000;
@@ -38,6 +38,16 @@ public class BankAccount {
 
    public void setBalance(double balance) {
       this.balance = balance;
+   }
+
+   public BankAccount clone() {
+      try {
+         return (BankAccount) super.clone();
+      } catch (CloneNotSupportedException e) {
+         System.err.println("BankAccount konnte nicht geklont werden");
+         e.printStackTrace();
+      }
+      return null;
    }
 
 }

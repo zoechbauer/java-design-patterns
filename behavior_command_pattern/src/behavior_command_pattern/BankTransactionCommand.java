@@ -4,4 +4,6 @@ public interface BankTransactionCommand {
    void execute();
 
    void undo();
+
+   BankTransactionCommand clone();
 }
