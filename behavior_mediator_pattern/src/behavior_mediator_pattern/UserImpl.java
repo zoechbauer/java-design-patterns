@@ -7,16 +7,14 @@ public class UserImpl extends User {
    }
 
    @Override
-   public void sendMessage(String message) {
+   public void sendToAll(String message) {
       System.out.printf("%n%s hat folgende Nachricht gesendet: %s%n", this.nickName, message);
       this.mediator.broadcast(message, this);
    }
 
    @Override
    public void receiveMessage(String message, User sender) {
-      if (!sender.nickName.equals(this.nickName)) {
-         System.out.printf("%s hat eine Nachricht von %s erhalten: %s%n", this.nickName, sender.nickName, message);
-      }
+      System.out.printf("%s hat eine Nachricht von %s erhalten: %s%n", this.nickName, sender.nickName, message);
    }
 
 }

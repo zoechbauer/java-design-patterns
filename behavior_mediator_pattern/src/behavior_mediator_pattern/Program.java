@@ -15,11 +15,11 @@ public class Program {
       chatroom.addUser(donald);
       chatroom.addUser(alice);
 
-      alice.sendMessage("Kann mir jemand den Weg ins Wunderland zeigen?");
+      alice.sendToAll("Kann mir jemand den Weg ins Wunderland zeigen?");
 
       chatroom.removeUser(donald);
 
-      jerry.sendMessage("Ich möchte auch mit, wer noch?");
+      jerry.sendToAll("Ich möchte auch mit, wer noch?");
    }
 
 }
