@@ -6,22 +6,22 @@ public class ChatMediatorImpl implements ChatMediator {
    private ArrayList<User> users;
 
    public ChatMediatorImpl() {
-      this.users = new ArrayList<>();
+      users = new ArrayList<>();
    }
 
    @Override
    public void addUser(User user) {
-      this.users.add(user);
+      users.add(user);
    }
 
    @Override
    public void removeUser(User user) {
-      this.users.remove(user);
+      users.remove(user);
    }
 
    @Override
    public void broadcast(String message, User sender) {
-      for (User user : this.users) {
+      for (User user : users) {
          if (!user.equals(sender)) {
             user.receiveMessage(message, sender);
          }

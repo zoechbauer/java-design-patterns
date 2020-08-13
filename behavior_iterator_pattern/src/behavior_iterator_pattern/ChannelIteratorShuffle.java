@@ -10,17 +10,17 @@ public class ChannelIteratorShuffle implements ChannelIterator {
 
    public ChannelIteratorShuffle(ArrayList<Channel> channels) {
       this.channels = channels;
-      this.shuffle();
+      shuffle();
    }
 
    private void shuffle() {
-      this.channelsShuffled = new ArrayList<>(this.channels);
+      channelsShuffled = new ArrayList<>(channels);
       Collections.shuffle(channelsShuffled);
    }
 
    @Override
    public boolean hasNext() {
-      if (this.currentPosition < this.channelsShuffled.size()) {
+      if (currentPosition < channelsShuffled.size()) {
          return true;
       }
       return false;
@@ -28,7 +28,7 @@ public class ChannelIteratorShuffle implements ChannelIterator {
 
    @Override
    public Channel next() {
-      return this.channelsShuffled.get(currentPosition++);
+      return channelsShuffled.get(currentPosition++);
    }
 
 }

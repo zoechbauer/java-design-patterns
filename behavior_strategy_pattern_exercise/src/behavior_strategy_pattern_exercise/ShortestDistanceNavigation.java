@@ -11,7 +11,7 @@ public class ShortestDistanceNavigation implements NavigationStrategy {
    public void calculateRoute(List<Route> routes) {
       System.out.println("\nStrategie: kürzeste Route wurde gewählt");
       System.out.println("Die Route wird berechnet...");
-      List<Route> routesSorted = this.sortByDistance(routes);
+      List<Route> routesSorted = sortByDistance(routes);
       System.out.println("Kürzeste Route: " + routesSorted.get(0));
    }
 

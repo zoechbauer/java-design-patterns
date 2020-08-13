@@ -6,19 +6,19 @@ public abstract class JokeSubject {
    private ArrayList<JokeObserver> observers = new ArrayList<>();
 
    public void subscribe(JokeObserver observer) {
-      if (!this.observers.contains(observer)) {
-         this.observers.add(observer);
+      if (!observers.contains(observer)) {
+         observers.add(observer);
       }
    }
 
    public void unsubscribe(JokeObserver observer) {
-      if (this.observers.contains(observer)) {
-         this.observers.remove(observer);
+      if (observers.contains(observer)) {
+         observers.remove(observer);
       }
    }
 
    public void notify(String joke) {
-      for (JokeObserver o : this.observers) {
+      for (JokeObserver o : observers) {
          o.update(joke);
       }
    }

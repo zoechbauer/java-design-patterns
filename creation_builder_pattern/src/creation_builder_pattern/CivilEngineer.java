@@ -8,14 +8,14 @@ public class CivilEngineer {
    }
 
    public void constructHouse() {
-      this.houseBuilder.buildBasement();
-      this.houseBuilder.buildMaterial();
-      this.houseBuilder.buildRoof();
-      this.houseBuilder.buildKitchen();
+      houseBuilder.buildBasement();
+      houseBuilder.buildMaterial();
+      houseBuilder.buildRoof();
+      houseBuilder.buildKitchen();
    }
 
    public House getHouse() {
-      return this.houseBuilder.getHouse();
+      return houseBuilder.getHouse();
    }
 
 }

@@ -8,7 +8,7 @@ public class Book {
    public Book(String title, String isbn) {
       this.title = title;
       this.isbn = isbn;
-      this.content = "";
+      content = "";
    }
 
    // getter/setter
@@ -38,21 +38,21 @@ public class Book {
 
    // memento
    public Memento setStateToMemento() {
-      return new Memento(this.title, this.isbn, this.content);
+      return new Memento(title, isbn, content);
    }
 
    public void getStateFromMemento(Memento memento) {
-      this.title = memento.getTitle();
-      this.isbn = memento.getIsbn();
-      this.content = memento.getContent();
+      title = memento.getTitle();
+      isbn = memento.getIsbn();
+      content = memento.getContent();
       System.out.println("Der ursprüngliche Zustand des Buches wurde wiederhergestellt");
    }
 
    @Override
    public String toString() {
-      int extractedCharacters = Math.min(50, this.content.length());
+      int extractedCharacters = Math.min(50, content.length());
       return String.format("Buch Titel: %s, ISBN=%s, Buchinhalt: %d Zeichen %nText-Anfang: %s%nText-Ende:   %s%n",
-            this.title, this.isbn, this.content.length(), this.content.substring(0, extractedCharacters),
-            this.content.substring(this.content.length() - extractedCharacters));
+            title, isbn, content.length(), content.substring(0, extractedCharacters),
+            content.substring(content.length() - extractedCharacters));
    }
 }

@@ -10,21 +10,21 @@ public class Investment {
    }
 
    public void setInvestmentStrategy(InvestmentStrategy strategy) {
-      this.selectedStrategy = strategy;
+      selectedStrategy = strategy;
       System.out.println("Die Strategie wurde gewählt.");
    }
 
    public void makeConsultation() {
-      this.isConsultation = true;
+      isConsultation = true;
       System.out.println("Das Beratungsgespräch war ausgezeichnet.");
    }
 
    public void makeInvestment() {
-      if (this.selectedStrategy == null || !this.isConsultation) {
+      if (selectedStrategy == null || !isConsultation) {
          throw new RuntimeException(
                "Sie müssen ein Beratungsgespräch mit der Bank führen und eine Investment-Strategie auswählen!");
       }
-      this.selectedStrategy.invest(this.investmentMoney);
+      selectedStrategy.invest(investmentMoney);
    }
 
 }

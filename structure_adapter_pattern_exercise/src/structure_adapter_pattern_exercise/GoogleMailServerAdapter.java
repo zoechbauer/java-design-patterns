@@ -9,9 +9,9 @@ public class GoogleMailServerAdapter implements MailServer {
 
    @Override
    public void connectAndSendMail(String emailAddress, String content, String receiverName) {
-      this.mailServer.buildConnection();
+      mailServer.buildConnection();
       String encryptedContend = encryptEmail(content);
-      this.mailServer.sendEmail(emailAddress, encryptedContend);
+      mailServer.sendEmail(emailAddress, encryptedContend);
       System.out.printf("Name des Empfängers: %s %n", receiverName);
    }
 

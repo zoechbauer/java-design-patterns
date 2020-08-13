@@ -10,7 +10,7 @@ public class Triangle extends Shape {
    }
 
    public double area() {
-      return this.length * this.heigth / 2;
+      return length * heigth / 2;
    }
 
 }

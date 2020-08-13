@@ -8,19 +8,19 @@ public class Birch implements Tree {
    private Color color;
 
    public Birch() {
-      this.treeType = TreeType.BIRCH;
-      this.color = Color.RED;
+      treeType = TreeType.BIRCH;
+      color = Color.RED;
       System.out.println("Es wurde eine Birke erstellt.");
    }
 
    @Override
    public TreeType getTreeType() {
-      return this.treeType;
+      return treeType;
    }
 
    @Override
    public Color getColor() {
-      return this.color;
+      return color;
    }
 
    @Override

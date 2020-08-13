@@ -6,27 +6,27 @@ public class AmphibiusVehicle {
    private State currentState;
 
    public AmphibiusVehicle() {
-      this.car = new CarState(this);
-      this.boat = new BoatState(this);
-      this.currentState = car;
+      car = new CarState(this);
+      boat = new BoatState(this);
+      currentState = car;
    }
 
    public void switchToCarState() {
-      this.currentState = car;
+      currentState = car;
       System.out.println("Das Fahrzeuge verhält sich wie ein Auto...");
    }
 
    public void switchToBoatState() {
-      this.currentState = boat;
+      currentState = boat;
       System.out.println("Das Fahrzeuge verhält sich wie ein Boot...");
    }
 
    public void accelerate() {
-      this.currentState.accelerate();
+      currentState.accelerate();
    }
 
    public void getSlower() {
-      this.currentState.getSlower();
+      currentState.getSlower();
    }
 
 }

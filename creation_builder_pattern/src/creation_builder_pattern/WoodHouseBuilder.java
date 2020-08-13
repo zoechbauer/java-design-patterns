@@ -4,7 +4,7 @@ public class WoodHouseBuilder extends HouseBuilder {
    private House house;
 
    public WoodHouseBuilder() {
-      this.house = new House();
+      house = new House();
    }
 
    @Override
@@ -32,7 +32,7 @@ public class WoodHouseBuilder extends HouseBuilder {
 
    @Override
    public House getHouse() {
-      return this.house;
+      return house;
    }
 
 }

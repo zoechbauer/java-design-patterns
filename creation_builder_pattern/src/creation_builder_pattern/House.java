@@ -24,7 +24,7 @@ public class House {
 
    @Override
    public String toString() {
-      return String.format("Haus%nKeller: %s%nBaumaterial: %s%nDach: %s%nKüche: %s%n", this.basement, this.material,
-            this.roof, this.kitchen);
+      return String.format("Haus%nKeller: %s%nBaumaterial: %s%nDach: %s%nKüche: %s%n", basement, material, roof,
+            kitchen);
    }
 }

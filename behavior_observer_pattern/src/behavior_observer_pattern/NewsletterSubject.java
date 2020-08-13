@@ -6,19 +6,19 @@ public abstract class NewsletterSubject {
    private ArrayList<NewsletterObserver> observers = new ArrayList<>();
 
    public void subscribe(NewsletterObserver observer) {
-      if (!this.observers.contains(observer)) {
-         this.observers.add(observer);
+      if (!observers.contains(observer)) {
+         observers.add(observer);
       }
    }
 
    public void unsubsribe(NewsletterObserver observer) {
-      if (this.observers.contains(observer)) {
-         this.observers.remove(observer);
+      if (observers.contains(observer)) {
+         observers.remove(observer);
       }
    }
 
    public void sendNewsletter(Newsletter newsletter) {
-      for (NewsletterObserver observer : this.observers) {
+      for (NewsletterObserver observer : observers) {
          observer.update(newsletter);
       }
    }

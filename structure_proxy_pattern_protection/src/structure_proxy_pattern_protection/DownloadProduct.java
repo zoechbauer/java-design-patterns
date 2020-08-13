@@ -10,7 +10,7 @@ public class DownloadProduct implements Downloadable {
    @Override
    public void download(Customer customer) {
       System.out.printf("Der Kunde mit der Mail-Adresse '%s' hat das Produkt '%s' erfolgreich heruntergeladen.%n",
-            customer.getEmail(), this.productName);
+            customer.getEmail(), productName);
    }
 
 }

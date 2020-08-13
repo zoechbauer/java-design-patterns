@@ -10,17 +10,17 @@ public class AdapterWizard implements EnemyObject {
 
    @Override
    public void attack() {
-      this.wizard.attackEnemy();
+      wizard.attackEnemy();
    }
 
    @Override
    public void sleep() {
-      this.wizard.goToBed();
+      wizard.goToBed();
    }
 
    @Override
    public void sayHello() {
-      this.wizard.communicate();
+      wizard.communicate();
    }
 
 }

@@ -7,16 +7,16 @@ public class Caretaker {
    private ArrayList<Memento> mementos;
 
    public Caretaker() {
-      this.mementos = new ArrayList<>();
+      mementos = new ArrayList<>();
    }
 
    public void saveState(FitnessPlan fitnessplan) {
       Memento Memento = fitnessplan.saveStateToMemento();
-      this.mementos.add(Memento);
+      mementos.add(Memento);
    }
 
    public void restoreState(FitnessPlan fitnessPlan, int index) {
-      Memento Memento = this.mementos.get(index);
+      Memento Memento = mementos.get(index);
       fitnessPlan.getStateFromMemento(Memento);
    }
 

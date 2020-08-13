@@ -11,7 +11,7 @@ public class Channel {
 
    @Override
    public String toString() {
-      return String.format("Du hörst gerade %s auf Frequenz %.2f Mhz", this.name, this.frequency);
+      return String.format("Du hörst gerade %s auf Frequenz %.2f Mhz", name, frequency);
    }
 
 }

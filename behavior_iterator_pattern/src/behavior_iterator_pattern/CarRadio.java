@@ -6,17 +6,17 @@ public class CarRadio implements ChannelCollection {
    private ArrayList<Channel> channels;
 
    public CarRadio() {
-      this.channels = new ArrayList<>();
+      channels = new ArrayList<>();
    }
 
    @Override
    public void addChannel(Channel channel) {
-      this.channels.add(channel);
+      channels.add(channel);
    }
 
    @Override
    public void removeChannel(Channel channel) {
-      this.channels.remove(channel);
+      channels.remove(channel);
    }
 
    @Override

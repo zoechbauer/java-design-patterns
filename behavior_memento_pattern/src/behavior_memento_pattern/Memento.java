@@ -8,6 +8,6 @@ public class Memento {
    }
 
    public String getState() {
-      return this.typeOfTraining;
+      return typeOfTraining;
    }
 }

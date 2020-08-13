@@ -15,21 +15,21 @@ public class GeneralJokes extends JokeSubject {
    private int currentJokeNumber = 0;
 
    public String getNewJoke() {
-      return this.newJoke;
+      return newJoke;
    }
 
    public void setNewJoke() {
-      this.setRandomJokeNumber();
-      this.newJoke = jokes.get(this.currentJokeNumber);
-      System.out.println("\nNeuer Witz: " + this.newJoke);
-      this.notify(this.newJoke);
+      setRandomJokeNumber();
+      newJoke = jokes.get(currentJokeNumber);
+      System.out.println("\nNeuer Witz: " + newJoke);
+      notify(newJoke);
    }
 
    private void setRandomJokeNumber() {
       int randomNumber = 0;
       do {
          randomNumber = (int) (Math.random() * jokes.size());
-      } while (randomNumber == this.currentJokeNumber);
-      this.currentJokeNumber = randomNumber;
+      } while (randomNumber == currentJokeNumber);
+      currentJokeNumber = randomNumber;
    }
 }

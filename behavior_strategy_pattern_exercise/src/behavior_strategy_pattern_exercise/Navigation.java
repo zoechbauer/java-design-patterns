@@ -11,18 +11,18 @@ public class Navigation {
    }
 
    public void setNavigationStrategy(NavigationStrategy strategy) {
-      this.selectedStrategy = strategy;
+      selectedStrategy = strategy;
    }
 
    public void calculateRoute() {
-      if (this.routes == null || this.routes.isEmpty()) {
+      if (routes == null || routes.isEmpty()) {
          throw new RuntimeException("Es wurden keine Routen übergeben!");
       }
-      if (this.selectedStrategy == null) {
+      if (selectedStrategy == null) {
          throw new RuntimeException(
                "Es muss zuvor eine Navigations-Strategie (kürzester Weg/geringste Zeit) ausgewählt werden!");
       }
-      this.selectedStrategy.calculateRoute(routes);
+      selectedStrategy.calculateRoute(routes);
    }
 
 }

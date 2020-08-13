@@ -12,16 +12,16 @@ public class FitnessPlan {
    }
 
    public Memento saveStateToMemento() {
-      return new Memento(this.typeOfTraining);
+      return new Memento(typeOfTraining);
    }
 
    public void getStateFromMemento(Memento memento) {
-      this.typeOfTraining = memento.getState();
+      typeOfTraining = memento.getState();
    }
 
    @Override
    public String toString() {
-      return "Trainingsart: " + this.typeOfTraining;
+      return "Trainingsart: " + typeOfTraining;
    }
 
 }

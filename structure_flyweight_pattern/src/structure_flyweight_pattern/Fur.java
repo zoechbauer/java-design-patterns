@@ -8,19 +8,19 @@ public class Fur implements Tree {
    private Color color;
 
    public Fur() {
-      this.treeType = TreeType.FUR;
-      this.color = Color.GREEN;
+      treeType = TreeType.FUR;
+      color = Color.GREEN;
       System.out.println("Es wurde eine Tanne erstellt.");
    }
 
    @Override
    public TreeType getTreeType() {
-      return this.treeType;
+      return treeType;
    }
 
    @Override
    public Color getColor() {
-      return this.color;
+      return color;
    }
 
    @Override

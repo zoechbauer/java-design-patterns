@@ -12,16 +12,16 @@ public class WithdrawCommand implements BankTransactionCommand, Cloneable {
 
    @Override
    public void execute() {
-      transactionSucceeded = this.bankAccount.withdraw(this.amount);
+      transactionSucceeded = bankAccount.withdraw(amount);
    }
 
    @Override
    public void undo() {
       if (transactionSucceeded) {
-         double oldBalance = this.bankAccount.getBalance() + this.amount;
-         this.bankAccount.setBalance(oldBalance);
+         double oldBalance = bankAccount.getBalance() + amount;
+         bankAccount.setBalance(oldBalance);
          System.out.printf("Banktransaktion wurde rückgängig gemacht, neuer Kontostand: %.2f €%n",
-               this.bankAccount.getBalance());
+               bankAccount.getBalance());
       } else {
          System.out
                .println("Undo konnte nicht durchgeführt werden, da die vorige Transaction fehlerhaft beendet wurde.");
@@ -32,7 +32,7 @@ public class WithdrawCommand implements BankTransactionCommand, Cloneable {
 
    @Override
    public String toString() {
-      return String.format("Auszahlung: %.2f €, Kontostand neu: %.2f €%n", this.amount, this.bankAccount.getBalance());
+      return String.format("Auszahlung: %.2f €, Kontostand neu: %.2f €%n", amount, bankAccount.getBalance());
    }
 
    public WithdrawCommand clone() {

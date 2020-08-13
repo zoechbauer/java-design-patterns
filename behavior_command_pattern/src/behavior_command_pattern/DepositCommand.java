@@ -11,20 +11,20 @@ public class DepositCommand implements BankTransactionCommand, Cloneable {
 
    @Override
    public void execute() {
-      this.bankAccount.deposit(this.amount);
+      bankAccount.deposit(amount);
    }
 
    @Override
    public void undo() {
-      double oldBalance = this.bankAccount.getBalance() - this.amount;
-      this.bankAccount.setBalance(oldBalance);
+      double oldBalance = bankAccount.getBalance() - amount;
+      bankAccount.setBalance(oldBalance);
       System.out.printf("Banktransaktion wurde rückgängig gemacht, neuer Kontostand: %.2f €%n",
-            this.bankAccount.getBalance());
+            bankAccount.getBalance());
    }
 
    @Override
    public String toString() {
-      return String.format("Einzahlung: %.2f €, Kontostand neu: %.2f €%n", this.amount, this.bankAccount.getBalance());
+      return String.format("Einzahlung: %.2f €, Kontostand neu: %.2f €%n", amount, bankAccount.getBalance());
    }
 
    public DepositCommand clone() {

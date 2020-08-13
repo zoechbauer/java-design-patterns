@@ -5,7 +5,7 @@ public class StandardInteresRate {
    private double interestRate;
 
    private StandardInteresRate() {
-      this.interestRate = 3.0;
+      interestRate = 3.0;
    }
 
    public static StandardInteresRate getInstance() {

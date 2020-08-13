@@ -16,18 +16,18 @@ public class ShoppingList {
 
    public void addEntry(String product) {
       String text = String.format("%d : %s", count++, product);
-      this.entries.add(text);
+      entries.add(text);
    }
 
    public void removeEntry(int index) {
-      this.entries.remove(index);
+      entries.remove(index);
    }
 
    @Override
    public String toString() {
       StringBuilder sb = new StringBuilder();
       sb.append("Einkaufsliste\n");
-      for (String product : this.entries) {
+      for (String product : entries) {
          sb.append(product);
          sb.append("\n");
       }

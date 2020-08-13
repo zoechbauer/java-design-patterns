@@ -10,8 +10,8 @@ public class Person implements NewsletterObserver {
 
    @Override
    public void update(Newsletter newsletter) {
-      this.currentNewsletter = newsletter;
-      System.out.printf("%s hat den neuen Newsletter '%s' erhalten.%n", this.name, this.currentNewsletter.getTopic());
+      currentNewsletter = newsletter;
+      System.out.printf("%s hat den neuen Newsletter '%s' erhalten.%n", name, currentNewsletter.getTopic());
    }
 
 }

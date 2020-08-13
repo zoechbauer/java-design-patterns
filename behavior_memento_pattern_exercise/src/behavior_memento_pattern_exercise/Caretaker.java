@@ -8,6 +8,6 @@ public class Caretaker {
    }
 
    public void restoreMemento(Book book) {
-      book.getStateFromMemento(this.lastSaving);
+      book.getStateFromMemento(lastSaving);
    }
 }

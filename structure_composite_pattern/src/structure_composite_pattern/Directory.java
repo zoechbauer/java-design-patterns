@@ -6,27 +6,27 @@ public class Directory extends FileSystemComponent {
    private ArrayList<FileSystemComponent> includedFiles = new ArrayList<>();
 
    public Directory(String name) {
-      this.setName(name);
+      setName(name);
    }
 
    @Override
    public void print(String spacing) {
-      System.out.printf("%sVerzeichnis: %s %n", spacing, this.getName());
-      for (FileSystemComponent c : this.includedFiles) {
+      System.out.printf("%sVerzeichnis: %s %n", spacing, getName());
+      for (FileSystemComponent c : includedFiles) {
          c.print(spacing + "   ");
       }
    }
 
    public void add(FileSystemComponent component) {
-      this.includedFiles.add(component);
+      includedFiles.add(component);
    }
 
    public void remove(FileSystemComponent component) {
-      this.includedFiles.remove(component);
+      includedFiles.remove(component);
    }
 
    public FileSystemComponent getComponent(int index) {
-      return this.includedFiles.get(index);
+      return includedFiles.get(index);
    }
 
 }

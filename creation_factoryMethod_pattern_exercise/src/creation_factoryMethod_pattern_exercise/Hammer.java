@@ -10,7 +10,7 @@ public class Hammer extends Item {
 
    @Override
    public int useItem() {
-      System.out.printf("Attacke von %s brachte %d Punkte %n", this.getName(), this.attackValue);
+      System.out.printf("Attacke von %s brachte %d Punkte %n", getName(), attackValue);
       return attackValue;
    }
 

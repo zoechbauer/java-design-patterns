@@ -14,13 +14,13 @@ public class WarGame {
     * game. After Game over the collected points are printed.
     */
    public void start() {
-      System.out.printf("Spiel Start: %d Punkte %n", this.points);
+      System.out.printf("Spiel Start: %d Punkte %n", points);
 
       for (int i = 0; i < 3; i++) {
          Item item = itemFactory.generateRandomItem();
-         this.points += item.useItem();
+         points += item.useItem();
       }
-      System.out.printf("Spiel Ende: %d Punkte %n%n", this.points);
+      System.out.printf("Spiel Ende: %d Punkte %n%n", points);
    }
 
 }

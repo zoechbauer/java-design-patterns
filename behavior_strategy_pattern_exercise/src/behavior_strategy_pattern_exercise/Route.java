@@ -12,8 +12,8 @@ public class Route {
    }
 
    public String toString() {
-      return String.format("Die Route '%s' beträgt %d Meter und kann in %d Minuten erreicht werden.", this.name,
-            this.distanceInMeter, this.timeInMinutes);
+      return String.format("Die Route '%s' beträgt %d Meter und kann in %d Minuten erreicht werden.", name,
+            distanceInMeter, timeInMinutes);
    }
 
    public int getTimeInMinutes() {

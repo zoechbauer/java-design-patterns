@@ -20,7 +20,7 @@ public class ChannelIteratorNormal implements ChannelIterator {
 
    @Override
    public Channel next() {
-      return this.channels.get(currentPosition++);
+      return channels.get(currentPosition++);
    }
 
 }

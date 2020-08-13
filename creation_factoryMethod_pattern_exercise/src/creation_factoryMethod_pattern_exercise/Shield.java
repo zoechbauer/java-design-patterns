@@ -10,8 +10,8 @@ public class Shield extends Item {
 
    @Override
    public int useItem() {
-      System.out.printf("Abwehr mit %s kostete %d Punkte %n", this.getName(), this.defenseValue);
-      return this.defenseValue * (-1);
+      System.out.printf("Abwehr mit %s kostete %d Punkte %n", getName(), defenseValue);
+      return defenseValue * (-1);
    }
 
 }

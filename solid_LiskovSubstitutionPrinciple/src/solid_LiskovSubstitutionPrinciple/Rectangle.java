@@ -27,7 +27,7 @@ public class Rectangle {
    }
 
    public double area() {
-      return this.getHeight() * this.getWidth();
+      return getHeight() * getWidth();
    }
 
 }
